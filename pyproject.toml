@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "buzzline"
+version = "0.1.0"
+description = "Buzzline API"
+authors = ["brenopereira18 <brenopereira@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+factory-boy = "^3.3.1"
+django = "^5.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
