@@ -11,6 +11,7 @@ factory-boy = "^3.3.1"
 django = "^5.1.2"
 django-rest-framework = "^0.1.0"
 pytest-django = "^4.9.0"
+djangorestframework = "^3.15.2"
 
 
 [tool.poetry.group.dev.dependencies]
