@@ -12,10 +12,11 @@ class CategorySerializer(serializers.ModelSerializer):
             'description',
             'active',
         ]
+        extra_kwargs = {'slug': {'required': False}}
         
 
 class ProductSerializer(serializers.ModelSerializer):
-    category = CategorySerializer(required=True, many=True,)
+    category = CategorySerializer(read_only=True, many=True,)
     categories_id = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all(), write_only=True, many=True)
 
     class Meta:
