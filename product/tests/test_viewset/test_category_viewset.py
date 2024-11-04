@@ -35,7 +35,7 @@ class TestCategoryViewSet(APITestCase):
             reverse('category-list', kwargs={'version': 'v1'}),
             data=data,
             content_type='application/json'
-        )
+        )        
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         created_category = Category.objects.get(title='technology')

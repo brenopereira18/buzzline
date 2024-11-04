@@ -42,9 +42,10 @@ class TestProductViewSet(APITestCase):
             reverse('product-list', kwargs={'version': 'v1'}),
             data=data,
             content_type='application/json'
-        )
+        )        
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
         created_product = Product.objects.get(title='notebook')
         self.assertEqual(created_product.title, 'notebook')
         self.assertEqual(created_product.price, 800.00)
